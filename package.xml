@@ -6,7 +6,7 @@
 		<packagename language="de">Unix-Zeitstempel BBCode</packagename>
 		<packagedescription><![CDATA[Allows to display time points depending on the user&#039;s time zone.]]></packagedescription>
 		<packagedescription language="de">Ermöglicht das Darstellen von Zeitpunkten abhängig von der Zeitzone eines Benutzers.</packagedescription>
-		<version>1.0.0</version>
+		<version>1.1.0</version>
 		<date>2022-09-16</date>
 	</packageinformation>
 	<authorinformation>
@@ -22,6 +22,10 @@
 	<instructions type="install">
 		<instruction type="file"/>
 		<instruction type="language"/>
+		<instruction type="bbcode"/>
+	</instructions>
+	<instructions type="update" fromversion="1.0.0">
+		<instruction type="file"/>
 		<instruction type="bbcode"/>
 	</instructions>
 </package>
