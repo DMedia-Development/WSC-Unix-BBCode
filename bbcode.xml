@@ -22,5 +22,19 @@
                 </attribute>
             </attributes>
         </bbcode>
+
+        <bbcode name="unixrelative">
+            <classname>wcf\system\bbcode\UnixRelativeBBCode</classname>
+            <attributes>
+                <attribute name="0">
+                    <validationpattern>^\d+$</validationpattern>
+                    <required>1</required>
+                    <usetext>1</usetext>
+                </attribute>
+                <attribute name="1">
+                    <validationpattern>^\D+$</validationpattern>
+                </attribute>
+            </attributes>
+        </bbcode>
     </import>
 </data>
