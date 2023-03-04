@@ -11,7 +11,6 @@ use wcf\util\DateUtil;
  * @author      Moritz Dahlke (DMedia)
  * @copyright   2023 DMedia Development
  * @license     GNU General Public License (GPL) <https://www.gnu.org/licenses/gpl-3.0.html>
- * @package     WoltLabSuite\Core\System\Bbcode
  */
 class UnixRelativeBBCode extends AbstractBBCode
 {
