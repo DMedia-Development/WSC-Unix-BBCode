@@ -68,11 +68,8 @@ class UnixTimestampBBCode extends AbstractBBCode
 
     /**
      * Returns 'true' if the value is a valid unix timestamp.
-     *
-     * @param  int $value
-     * @return bool
      */
-    protected function isUnixTimestamp($value): bool
+    protected function isUnixTimestamp(int $value): bool
     {
         if (!\is_numeric($value) || $value <= 0) {
             return false;
