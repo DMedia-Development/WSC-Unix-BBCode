@@ -62,7 +62,7 @@ class UnixTimestampBBCode extends AbstractBBCode
         return \str_replace(
             '%ICON_NAME%',
             $openingTag['attributes'][3],
-            '<span class="icon %ICON_NAME%"></span> '
+            '<fa-icon name="%ICON_NAME%" solid></fa-icon> '
         ) . $value;
     }
 
