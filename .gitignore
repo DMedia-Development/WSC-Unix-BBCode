@@ -1,6 +1,11 @@
+# OS/IDEA Files
 .DS_Store
 .vscode/*
 .idea
 
+# Node.js
+node_modules/
+
+# "Compiled" Packages
 *.tar
 *.tar.gz
