@@ -17,7 +17,7 @@ class UnixRelativeBBCode extends AbstractBBCode
     /**
      * @inheritdoc
      */
-    public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser)
+    public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser): string
     {
         $value = '';
 
@@ -53,7 +53,7 @@ class UnixRelativeBBCode extends AbstractBBCode
      * @param  int $value
      * @return bool
      */
-    protected function isUnixTimestamp($value)
+    protected function isUnixTimestamp($value): bool
     {
         if (!\is_numeric($value) || $value <= 0) {
             return false;
