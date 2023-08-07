@@ -3,7 +3,7 @@
     <import>
         <bbcode name="unixtime">
             <classname>wcf\system\bbcode\UnixTimestampBBCode</classname>
-            <wysiwygicon>fa-clock-o</wysiwygicon>
+            <wysiwygicon>clock;false</wysiwygicon>
             <buttonlabel>wcf.editor.button.unix</buttonlabel>
             <attributes>
                 <attribute name="0">
