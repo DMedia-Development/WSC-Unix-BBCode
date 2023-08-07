@@ -24,15 +24,7 @@
 		<instruction type="language"/>
 		<instruction type="bbcode"/>
 	</instructions>
-	<instructions type="update" fromversion="1.0.0">
-		<instruction type="file"/>
-		<instruction type="bbcode"/>
-	</instructions>
-	<instructions type="update" fromversion="1.1.0">
-		<instruction type="file"/>
-		<instruction type="bbcode"/>
-	</instructions>
-	<instructions type="update" fromversion="1.2.0">
+	<instructions type="update" fromversion="1.*.*">
 		<instruction type="file"/>
 		<instruction type="bbcode"/>
 	</instructions>
