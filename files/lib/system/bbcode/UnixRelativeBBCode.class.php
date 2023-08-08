@@ -28,7 +28,7 @@ class UnixRelativeBBCode extends AbstractBBCode
         $timestamp = \intval($openingTag['attributes'][0]);
 
         if (!$this->isUnixTimestamp($timestamp)) {
-            return $value;
+            return $openingTag['attributes'][0];
         }
 
         $dateTime = DateUtil::getDateTimeByTimestamp($timestamp);

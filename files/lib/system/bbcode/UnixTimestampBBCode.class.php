@@ -29,7 +29,7 @@ class UnixTimestampBBCode extends AbstractBBCode
         $timestamp = \intval($openingTag['attributes'][0]);
 
         if (!$this->isUnixTimestamp($timestamp)) {
-            return $value;
+            return $openingTag['attributes'][0];
         }
 
         $dateFormat = 'l, j. F Y';
