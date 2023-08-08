@@ -20,7 +20,7 @@ define(["require", "exports", "WoltLabSuite/Core/Component/Ckeditor/Event"], fun
                 if (bbcode === "unixtime") {
                     event.preventDefault();
                     const currentTimestamp = Math.floor(Date.now() / 1000);
-                    ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText('[unixtime]' + currentTimestamp + '[/unixtime]');
+                    ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
                 }
             });
         }

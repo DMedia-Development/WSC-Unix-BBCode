@@ -27,7 +27,7 @@ export default class Unixtime {
                     event.preventDefault();
 
                     const currentTimestamp = Math.floor(Date.now() / 1000);
-                    ckeditor?.insertText('[unixtime]' + currentTimestamp + '[/unixtime]');
+                    ckeditor?.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
                 }
             }
         );
