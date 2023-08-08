@@ -11,19 +11,18 @@ define(["require", "exports", "WoltLabSuite/Core/Component/Ckeditor/Event"], fun
     class Unixtime {
         constructor(element) {
             (0, Event_1.listenToCkeditor)(element).ready(({ ckeditor }) => {
-                ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.sourceElement.addEventListener("ckeditor5:bbcode", (event) => {
-                    const { bbcode } = event.detail;
-                    console.log(bbcode);
-                    if (bbcode === "unixtime") {
-                        event.preventDefault();
-                        //this.doStuf();
-                        //ckeditor?.insertText('test!');
-                    }
-                });
+                this.setupBBCode(ckeditor);
             });
         }
-        doStuf() {
-            console.log('stuff');
+        setupBBCode(ckeditor) {
+            ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.sourceElement.addEventListener("ckeditor5:bbcode", (event) => {
+                const { bbcode } = event.detail;
+                if (bbcode === "unixtime") {
+                    event.preventDefault();
+                    const currentTimestamp = Math.floor(Date.now() / 1000);
+                    ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText('[unixtime]' + currentTimestamp + '[/unixtime]');
+                }
+            });
         }
     }
     exports.default = Unixtime;
