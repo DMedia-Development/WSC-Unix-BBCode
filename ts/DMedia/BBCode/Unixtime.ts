@@ -18,18 +18,13 @@ export default class Unixtime {
     }
 
     setupBBCode(ckeditor: CKEditor) {
-        ckeditor?.sourceElement.addEventListener(
-            "ckeditor5:bbcode",
-            (event: CustomEvent<{ bbcode: string }>) => {
-                const { bbcode } = event.detail;
+        listenToCkeditor(ckeditor.sourceElement).bbcode(({ bbcode }) => {
+            if (bbcode !== "unixtime") return false;
 
-                if (bbcode === "unixtime") {
-                    event.preventDefault();
+            const currentTimestamp = Math.floor(Date.now() / 1000);
+            ckeditor?.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
 
-                    const currentTimestamp = Math.floor(Date.now() / 1000);
-                    ckeditor?.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
-                }
-            }
-        );
+            return true;
+        });
     }
 }

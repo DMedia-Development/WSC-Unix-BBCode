@@ -15,13 +15,12 @@ define(["require", "exports", "WoltLabSuite/Core/Component/Ckeditor/Event"], fun
             });
         }
         setupBBCode(ckeditor) {
-            ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.sourceElement.addEventListener("ckeditor5:bbcode", (event) => {
-                const { bbcode } = event.detail;
-                if (bbcode === "unixtime") {
-                    event.preventDefault();
-                    const currentTimestamp = Math.floor(Date.now() / 1000);
-                    ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
-                }
+            (0, Event_1.listenToCkeditor)(ckeditor.sourceElement).bbcode(({ bbcode }) => {
+                if (bbcode !== "unixtime")
+                    return false;
+                const currentTimestamp = Math.floor(Date.now() / 1000);
+                ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
+                return true;
             });
         }
     }
