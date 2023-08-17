@@ -27,6 +27,7 @@
 	</instructions>
 	<instructions type="update" fromversion="1.*.*">
 		<instruction type="file"/>
+		<instruction type="template"/>
 		<instruction type="bbcode"/>
 	</instructions>
 </package>
