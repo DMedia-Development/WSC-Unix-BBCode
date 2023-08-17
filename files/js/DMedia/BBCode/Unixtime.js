@@ -16,10 +16,22 @@ define(["require", "exports", "WoltLabSuite/Core/Component/Ckeditor/Event"], fun
         }
         setupBBCode(ckeditor) {
             (0, Event_1.listenToCkeditor)(ckeditor.sourceElement).bbcode(({ bbcode }) => {
+                var _a, _b;
                 if (bbcode !== "unixtime")
                     return false;
-                const currentTimestamp = Math.floor(Date.now() / 1000);
-                ckeditor === null || ckeditor === void 0 ? void 0 : ckeditor.insertText(`[unixtime]${currentTimestamp}[/unixtime]`);
+                // no access to editor nor selection...
+                const contentEditable = ckeditor.element;
+                const selection = window.getSelection();
+                // check if there is a selection
+                if (selection && selection.toString() !== '') {
+                    // check if the selection is within the CKEditor
+                    if (((_a = selection.focusNode) === null || _a === void 0 ? void 0 : _a.parentNode) && contentEditable.contains((_b = selection.focusNode) === null || _b === void 0 ? void 0 : _b.parentNode)) {
+                        // fallback to default behaviour
+                        return false;
+                    }
+                }
+                // if there is not a selection, or the selection is outside the CKEditor, insert current timestamp
+                ckeditor.insertText(`[unixtime]${Math.floor(Date.now() / 1000)}[/unixtime]`);
                 return true;
             });
         }
