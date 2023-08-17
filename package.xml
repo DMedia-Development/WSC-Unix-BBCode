@@ -22,12 +22,14 @@
 	<instructions type="install">
 		<instruction type="file"/>
 		<instruction type="template"/>
+		<instruction type="templateListener"/>
 		<instruction type="language"/>
 		<instruction type="bbcode"/>
 	</instructions>
 	<instructions type="update" fromversion="1.*.*">
 		<instruction type="file"/>
 		<instruction type="template"/>
+		<instruction type="templateListener"/>
 		<instruction type="bbcode"/>
 	</instructions>
 </package>
