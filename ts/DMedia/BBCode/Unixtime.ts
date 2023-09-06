@@ -1,4 +1,4 @@
-/**
+/*!
  * Inserts the unix bbcode into the ckeditor.
  * 
  * @author Moritz Dahlke (DMedia)
