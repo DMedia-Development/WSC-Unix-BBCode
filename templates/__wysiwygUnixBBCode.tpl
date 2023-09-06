@@ -2,13 +2,13 @@
 	<script data-relocate="true">
 		require([
 			"DMedia/BBCode/Unixtime"
-		], (CkeditorBBCodeHandler) => {
+		], (UnixtimeBBCode) => {
 			const element = document.getElementById('{$wysiwygSelector|encodeJS}');
 			if (element === null) {
 				throw new Error("Unable to find the source element '{$wysiwygSelector|encodeJS}' for the editor.");
 			}
 
-			new CkeditorBBCodeHandler.default(element);
+			new UnixtimeBBCode.default(element);
 		});
 	</script>
 {/if}
