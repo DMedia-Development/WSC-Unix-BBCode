@@ -7,7 +7,7 @@
 		<packagedescription><![CDATA[Allows to display time points depending on the user's time zone.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Ermöglicht das Darstellen von Zeitpunkten abhängig von der Zeitzone eines Benutzers.]]></packagedescription>
 		<version>2.0.0</version>
-		<date>2023-08-17</date>
+		<date>2023-09-06</date>
 	</packageinformation>
 	<authorinformation>
 		<author>DMedia Development</author>
