@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "format": "npx prettier --write ts/",
+    "watch": "npx tsc -w"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
