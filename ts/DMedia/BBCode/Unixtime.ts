@@ -17,7 +17,7 @@ export default class UnixtimeBBCode {
         });
     }
 
-    setupBBCode(ckeditor: CKEditor) {
+    setupBBCode(ckeditor: CKEditor): void {
         listenToCkeditor(ckeditor.sourceElement).bbcode(({ bbcode }) => {
             if (bbcode !== "unixtime") return false;
 
