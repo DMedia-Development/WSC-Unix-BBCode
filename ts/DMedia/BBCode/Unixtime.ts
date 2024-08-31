@@ -1,6 +1,6 @@
 /*!
  * Inserts the unix bbcode into the ckeditor.
- * 
+ *
  * @author Moritz Dahlke (DMedia)
  * @copyright 2023 DMedia Development
  * @license MIT
@@ -26,7 +26,7 @@ export default class UnixtimeBBCode {
             const selection = window.getSelection();
 
             // check if there is a selection
-            if (selection && selection.toString() !== '') {
+            if (selection && selection.toString() !== "") {
                 // check if the selection is within the CKEditor
                 if (selection.focusNode?.parentNode && contentEditable.contains(selection.focusNode?.parentNode)) {
                     // fallback to default behaviour
