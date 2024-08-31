@@ -2,7 +2,6 @@
 
 namespace wcf\system\bbcode;
 
-use wcf\system\bbcode\AbstractBBCode;
 use wcf\system\WCF;
 use wcf\util\DateUtil;
 
