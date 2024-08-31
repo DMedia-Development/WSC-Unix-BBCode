@@ -8,7 +8,7 @@
 
 import { listenToCkeditor } from "WoltLabSuite/Core/Component/Ckeditor/Event";
 
-import type { CKEditor } from "@woltlab/wcf/ts/WoltLabSuite/Core/Component/Ckeditor";
+import type { CKEditor } from "WoltLabSuite/Core/Component/Ckeditor";
 
 export default class UnixtimeBBCode {
     constructor(element: HTMLElement) {
