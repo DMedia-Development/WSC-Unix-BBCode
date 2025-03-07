@@ -1,7 +1,7 @@
 @ECHO OFF
 
 Rem Set package name based on the current directory
-FOR %%I IN (.) DO SET PACKAGE_NAME=%%~nI%%~xI
+FOR %%I IN (.) DO SET PACKAGE_NAME="dev.dmedia.unix.bbcode"
 
 Rem Extract version number from package.xml
 FOR /f "delims=" %%a in ('findstr /i /l /c:"<version>" "package.xml"') DO SET "PACKAGE_VERSION=%%a"
