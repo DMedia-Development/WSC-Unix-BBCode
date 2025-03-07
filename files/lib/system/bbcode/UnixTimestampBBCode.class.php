@@ -9,7 +9,7 @@ use wcf\util\DateUtil;
  * Implementation of the Unix-Timestamp BBCode.
  *
  * @author      Moritz Dahlke (DMedia)
- * @copyright   2022-2024 DMedia Development
+ * @copyright   2022-2025 DMedia Development
  * @license     GNU General Public License (GPL) <https://www.gnu.org/licenses/gpl-3.0.html>
  */
 class UnixTimestampBBCode extends AbstractBBCode

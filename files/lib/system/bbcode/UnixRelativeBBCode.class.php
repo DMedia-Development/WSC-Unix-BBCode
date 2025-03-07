@@ -8,7 +8,7 @@ use wcf\util\DateUtil;
  * Implementation of the Relative-Time BBCode for Unix-Timestamps.
  *
  * @author      Moritz Dahlke (DMedia)
- * @copyright   2023-2024 DMedia Development
+ * @copyright   2023-2025 DMedia Development
  * @license     GNU General Public License (GPL) <https://www.gnu.org/licenses/gpl-3.0.html>
  */
 class UnixRelativeBBCode extends AbstractBBCode

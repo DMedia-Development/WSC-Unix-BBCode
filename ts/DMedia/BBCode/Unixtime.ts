@@ -2,7 +2,7 @@
  * Inserts the unix bbcode into the ckeditor.
  *
  * @author Moritz Dahlke (DMedia)
- * @copyright 2023-2024 DMedia Development
+ * @copyright 2023-2025 DMedia Development
  * @license MIT
  */
 
