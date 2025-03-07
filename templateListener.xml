@@ -5,7 +5,7 @@
             <environment>user</environment>
             <templatename>wysiwyg</templatename>
             <eventname>wysiwyg</eventname>
-            <templatecode><![CDATA[{include file='__wysiwygUnixBBCode'}]]></templatecode>
+            <templatecode><![CDATA[{include file='shared_bbcode_unix'}]]></templatecode>
         </templatelistener>
     </import>
 </data>
