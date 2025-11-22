@@ -46,10 +46,10 @@ class UnixTimestampBBCode extends AbstractBBCode
 
         $value = \str_replace(
             '%time%',
-            DateUtil::format($dateTime, $timeFormat),
+            $dateTime->format($timeFormat),
             \str_replace(
                 '%date%',
-                DateUtil::format($dateTime, $dateFormat),
+                $dateTime->format($dateFormat),
                 WCF::getLanguage()->get('wcf.date.dateTimeFormat')
             )
         );

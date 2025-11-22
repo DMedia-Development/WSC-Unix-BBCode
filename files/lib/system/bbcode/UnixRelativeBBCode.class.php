@@ -43,7 +43,7 @@ class UnixRelativeBBCode extends AbstractBBCode
             return $formattedText;
         }
 
-        return '<span title="' . DateUtil::format($dateTime, 'l, j. F Y H:i:s') . '">' . $formattedText . '</span>';
+        return '<span title="' . $dateTime->format('l, j. F Y H:i:s') . '">' . $formattedText . '</span>';
     }
 
     /**
